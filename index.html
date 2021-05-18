@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Game" />
+    <meta name="author" content="Liyu Lin" />
+    <title>Unity WebGL Player | Bobo Jump</title>
+    <style>
+      .button {
+            text-align: center;
+            margin-top:1.5em;
+            margin-bottom: auto;
+            padding-bottom: 1.0em;
+            justify-content: center;
+            }
+            a {
+            background-color: black;
+            color: white;
+            padding: 1em 1.5em;
+            text-decoration: none;
+            text-transform: uppercase;
+            }
+
+            a:hover {
+            background-color: #FF00FF;;
+            }
+
+            a:active {
+            background-color: black;
+            }
+
+            a:visited {
+            background-color: black;
+            }
+    </style>
+  </head>
+  <body style="text-align: center">
+    <h1>BOBO JUMP</h1>
+    <h2>About</h2>
+    <p>The Bobo Jump game follows Bobo's adventure. He likes to collect COINS and he is not afraid of all kinds of dangers.</p> 
+    <p>He likes to jump up and down and likes to challenge himself.</p>
+    <p>Every game has three lives, and when all lives are finished, the game is over.</p>
+    <h2>Instructions</h2>
+    <ul>
+      <li>Press "&#8592 / &#8594" to move the player go forward and backward</li>
+      <li>Press the "Space" key to jump</li>
+      <li>Press "ctrl/cmd + R" to start a new game</li>
+      <li>Press "cmd + W" to close the window</li>
+    </ul>
+    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <script src="Build/Bobo_Jump.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Bobo_Jump.data.gz",
+        frameworkUrl: "Build/Bobo_Jump.framework.js.gz",
+        codeUrl: "Build/Bobo_Jump.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "llyu0966",
+        productName: "Bobo Jump",
+        productVersion: "1.0.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+    <br/>
+    <div class="button">
+        <a href="https://llyu0966.github.io/" class="button">Main Page</a>
+    </div>
+  </body>
+</html>
